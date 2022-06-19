@@ -6,7 +6,10 @@ class CircleProgress extends CustomPainter {
   double value;
   bool isTemp;
 
-  CircleProgress(this.value, this.isTemp);
+  CircleProgress(
+    this.value,
+    this.isTemp,
+  );
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
