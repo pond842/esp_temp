@@ -79,7 +79,7 @@ class _DashboardState extends State<Dashboard> {
                         children: <Widget>[
                           Text('Temperature'),
                           Text(
-                            snapshot.data!['temperature'].toString(),
+                            snapshot.data!['temperature'].toStringAsFixed(1),
                             style: TextStyle(
                               fontSize: 50,
                               fontWeight: FontWeight.bold,
@@ -111,19 +111,19 @@ class _DashboardState extends State<Dashboard> {
                         children: <Widget>[
                           Text('PH'),
                           Text(
-                            snapshot.data!['pH'].toString(),
+                            snapshot.data!['pH'].toStringAsFixed(2),
                             style: TextStyle(
                               fontSize: 50,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            '%',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                          // Text(
+                          //   '%',
+                          //   style: TextStyle(
+                          //     fontSize: 20,
+                          //     fontWeight: FontWeight.bold,
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),

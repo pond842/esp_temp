@@ -46,11 +46,11 @@ client.on("message", function (topic, message) {
     console.debug(action);
     switch (topic) {
       case '/sensors':
-        if (isSensorExist(message)) {
-          registerNewSensor(message);
-        } else {
+        // if (isSensorExist(message)) {
+        //   registerNewSensor(message);
+        // } else {
           updateValue(message)
-        }
+        // }
         break;
       default:
         break;
@@ -108,11 +108,12 @@ async function isSensorExist(message) {
   var device = JSON.parse(message);
   let sensorRef = cloudFirestore.collection("sensors");
   let not_exist = false;
-
+  console.log(device.id.toString());
   await sensorRef
     .doc(device.id.toString())
     .get()
     .then(function (doc) {
+      console.log(doc.exists)
       if (doc.exists) {
         not_exist = false;
       } else {
