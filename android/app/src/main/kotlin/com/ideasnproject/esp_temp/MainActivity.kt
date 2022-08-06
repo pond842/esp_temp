@@ -1,4 +1,4 @@
-package com.ideasnproject.esp_temp
+package com.polygoncode.esp_temp
 
 import io.flutter.embedding.android.FlutterActivity
 

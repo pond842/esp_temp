@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ideasnproject.esp_temp">
+    package="com.polygoncode.esp_temp">
    <application
         android:label="esp_temp"
         android:name="${applicationName}"
